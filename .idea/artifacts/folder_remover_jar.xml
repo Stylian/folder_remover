@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="folder_remover:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/folder_remover_jar</output-path>
+    <root id="archive" name="folder_remover.jar">
+      <element id="module-output" name="folder_remover" />
+    </root>
+  </artifact>
+</component>

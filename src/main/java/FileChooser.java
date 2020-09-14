@@ -1,24 +1,23 @@
 import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileSystemView;
 import java.io.File;
 import java.net.URISyntaxException;
 
 public class FileChooser {
 
-    public static void main(String[] args) {
+    public String askForFolderPath(String title) throws Exception {
 
         JFileChooser jfc = new JFileChooser(getJarPath());
-        jfc.setDialogTitle("Select the parent folder");
+        jfc.setDialogTitle(title);
         jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 
         int returnValue = jfc.showOpenDialog(null);
 
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedFile = jfc.getSelectedFile();
-            System.out.println(selectedFile.getAbsolutePath());
+            return selectedFile.getAbsolutePath();
         }
-
+        throw new Exception("a folder was not selected");
     }
 
     private static String getJarPath() {

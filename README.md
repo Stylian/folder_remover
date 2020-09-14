@@ -1,4 +1,5 @@
 #how to run
+
 run the folder_remover.jar file and select the folder to pick its contents and the
 folder to place the files to
 
